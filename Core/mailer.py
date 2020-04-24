@@ -29,15 +29,15 @@ def NormalEmail():
  |___|                                                        |___|
 (_____)------------------------------------------------------(_____) """)
 
-	print(alert + "It Mitht Take A Few Minutes Until The Target Gets The Email" + alert)
+	print(alert + "It Might Take A Few Minutes Until The Target Gets The Email" + alert)
 	print(alert + "You Need To Allow Less Secure Apps On You Gmail Account" + alert)
 	
 	print("")
-	fromaddr = input(start + "Enter Your Email-Address: ")
-	password = getpass.getpass(start + "Enter Your Password (will not be shown): ")
-	toaddr = input(start + "Enter Email-Address To Send To: ")
-	subject = input(start + "Enter Subject: ")
-	pathfile = input(start + "Enter Path To Html File: ")
+	fromaddr = input(start + " Enter Your Email-Address: ")
+	password = getpass.getpass(start + " Enter Your Password (will not be shown): ")
+	toaddr = input(start + " Enter Email-Address To Send To: ")
+	subject = input(start + " Enter Subject: ")
+	pathfile = input(start + " Enter Path To Html File: ")
 
 	html = open(pathfile)
 	msg = MIMEText(html.read(), 'html')
