@@ -15,20 +15,35 @@ Because I Have used It To Hack Others But Remember That It Is Illegal To Do It S
 Don't Come To Me And Blame Me For It
 
 ### Features
-* Phishing Email Creator For: 
+* Phishing Email Creator With 20 Different Templates: 
   * Instagram
   * Facebook
-  * Gmail
+  * Gmail(2)
   * Twitter
   * Paypal
+  * Snapchat(2)
+  * Spotify
+  * Linkedin
+  * Discord
+  * Dropbox
+  * Steam
+  * RiotGames (League Of Legends)
+  * Rockstar SocialClub
+  * BlockChain
+  * DreamTeam
+  * 000Webhosting
+  * AskFM
+  * Gamehag
+#### And More Are On The Way
 * Creates Both .HTML And .TXT Files
 * Send Emails Using Gmail
+* Easy To Use
 
-[![Phish-Mailer-Menu.png](https://i.postimg.cc/9FBjj15Y/Phish-Mailer-Menu.png)](https://postimg.cc/XpXPffvr)
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/7jHvtgL/nyaste-meny.png" alt="nyaste-meny" border="0"></a>
 [![option.png](https://i.postimg.cc/sXM9y36C/option.png)](https://postimg.cc/jwrJ4YYM)
 
-#### Instagram Result:
-[![instagram.png](https://i.postimg.cc/tgQKmtbF/instagram.png)](https://postimg.cc/DS6pSG8z)
+#### Gmail (Simple) Result:
+<a href="https://ibb.co/kSjzn5s"><img src="https://i.ibb.co/hmbr5LJ/Gmail-github.png" alt="Gmail-github" border="0"></a>
 
 ## Install
 **You Need Python3**
@@ -47,11 +62,12 @@ python3 PhishMailer.py
 
 ## To Do
 - [x] Send Emails
-- [ ] Add More Email Templates
+- [x] Add More Email Templates
 - [ ] Add More Target Specified Emails, With Profile Pictures for example
 - [ ] Add Emails With More Languages (If You Speak Another language Than English And Would Like To Help Contact Me)
 - [ ] Mass Email Sender
 - [ ] Fix More Email Clients To Send From
+- [ ] Make The Code Cleaner
 
 ## Contact
 If You Have Any Ideas And/Or Have Created Some Phishing Email(s) And Want To Have Your Name Here As A Code Helper
