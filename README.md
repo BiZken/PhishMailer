@@ -40,7 +40,6 @@ Don't Come To Me And Blame Me For It
 * Easy To Use
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/7jHvtgL/nyaste-meny.png" alt="nyaste-meny" border="0"></a>
-[![option.png](https://i.postimg.cc/sXM9y36C/option.png)](https://postimg.cc/jwrJ4YYM)
 
 #### Gmail (Simple) Result:
 <a href="https://ibb.co/kSjzn5s"><img src="https://i.ibb.co/hmbr5LJ/Gmail-github.png" alt="Gmail-github" border="0"></a>
