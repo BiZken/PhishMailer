@@ -24,7 +24,7 @@ def AllNeed():
 	global Browser
 	global Device
 	
-	print(start + " Pick The Options That Fits Your Attack (enter for default): ")
+	print(start + " Pick The Options That Fits Your Attack: ")
 	print(green + "[" + white + "1" + green + "]" + blue + " Chrome" + white + "  »" + blue + " Windows" + white + " «")
 	print(green + "[" + white + "2" + green + "]" + blue + " Safari" + white + "  »" + blue + " IPhone" + white + "  «")
 	print(green + "[" + white + "3" + green + "]" + blue + " Edge" + white + "    »" + blue + " Windows" + white + " «")
