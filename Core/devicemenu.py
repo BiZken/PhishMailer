@@ -1,13 +1,7 @@
 import os
 import sys
 from Core.helper.date import monthName
-
-red = ("\033[1;31;40m")
-green = ("\033[1;32;40m")
-white = ("\033[1;37;40m")
-blue = ("\033[1;34;40m")
-start = (green + "[" + white + "+" + green + "]" + white)
-alert = (green + "[" + red + "!" + green + "]" + white)
+from Core.helper.color import red, green, white, blue, start, alert
 
 def Custom():
 	global Device
