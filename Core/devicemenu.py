@@ -1,5 +1,6 @@
 import os
 import sys
+from Core.helper.date import monthName
 
 red = ("\033[1;31;40m")
 green = ("\033[1;32;40m")
@@ -74,6 +75,9 @@ def AllNeed():
 		Device = ("Windows")
 
 def Linkedin():
+	print(monthName(1))
+
+	pass
 	Name = input(start + " Enter Target Name: ")
 	username = input(start + " Enter Target Username: ")
 	Url = input(start + " Enter Your PhishingUrl: ")
