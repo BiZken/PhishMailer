@@ -1,7 +1,7 @@
 import os
 import sys
 from Core.helper.date import monthName
-from Core.helper.color import green, white, blue, start, alert, number
+from Core.helper.color import green, white, blue, start, alert, numbering
 
 def Custom():
 	global Device
@@ -11,6 +11,7 @@ def Custom():
 	print(start + " /Custom Pick\\ ")
 	print(alert + " Enter Browser")
 	print("")
+	
 	Browser = input(green + "root@phishmailer/Device/Custom:~ ")
 	print(alert + " Enter Device")
 	Device = input("root@phishmailer/Device/Custom:~ ")
@@ -237,7 +238,9 @@ def Linkedin():
 	Html_file = open(filename + ".html","w")
 	Html_file.write(source)
 	Html_file.close()
+	
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()
@@ -350,6 +353,7 @@ def Dropbox():
 	Html_file = open(filename + ".html","w")
 	Html_file.write(source)
 	Html_file.close()
+	
 	print(alert + " HTML File Created")
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
