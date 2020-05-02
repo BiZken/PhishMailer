@@ -238,7 +238,6 @@ def Linkedin():
 	Html_file = open(filename + ".html","w")
 	Html_file.write(source)
 	Html_file.close()
-	
 	print(alert + " HTML File Created")
 	
 	TXT_file = open(TXTname + ".txt","w")
@@ -353,8 +352,8 @@ def Dropbox():
 	Html_file = open(filename + ".html","w")
 	Html_file.write(source)
 	Html_file.close()
-	
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()
