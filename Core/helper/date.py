@@ -1,3 +1,6 @@
+import time
+import sys
+
 def monthName(num):
 	if num == 1:
 		return "January"
@@ -18,7 +21,7 @@ def monthName(num):
 	elif num == 9:
 		return "September"
 	elif num == 10:
-		month ("October")
+		return "October"
 	elif num == 11:
 		return "November"
 	elif num == 12:
