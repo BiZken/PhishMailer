@@ -1,12 +1,7 @@
 import os
 import sys
-
-red = ("\033[1;31;40m")
-green = ("\033[1;32;40m")
-white = ("\033[1;37;40m")
-blue = ("\033[1;34;40m")
-start = (green + "[" + white + "+" + green + "]" + white)
-alert = (green + "[" + red + "!" + green + "]" + white)
+from Core.helper.date import monthName
+from Core.helper.color import green, white, blue, start, alert, numbering
 
 def IpPick():
 	global GenIp
@@ -14,8 +9,8 @@ def IpPick():
 	global Country
 	
 	print("\n" + start + " Do You Have An Ip To Use Or Do You Want To Use A Pre-Generated One")
-	print(green + "[" + white + "1" + green + "]" + white + " Your Own Ip (Might Need County And City)")
-	print(green + "[" + white + "2" + green + "]" + white + " Pre-Generated Ip")
+	print(numbering(1) + white + " Your Own Ip (Might Need County And City)")
+	print(numbering(2) + white + " Pre-Generated Ip")
 	print("")
 	
 	IpPick = int(input(green + "root@phishmailer/Ip:~ "))
@@ -27,11 +22,11 @@ def IpPick():
 		City = input(start + " Enter City (might not be used): ")
 		
 	elif IpPick == 2:
-		print(green + "[" + white + "1" + green + "]" + white + " 84.158.45.15 |" + blue + " Country:" + white + " Germany" + white + "   |" + blue + " City:" + white + " Eutin")
-		print(green + "[" + white + "2" + green + "]" + white + " 126.121.51.5 |" + blue + " Country:" + white + " Japan" + white + "     |" + blue + " City:" + white + " Toride")
-		print(green + "[" + white + "3" + green + "]" + white + " 43.158.42.67 |" + blue + " Country:" + white + " Australia" + white + " |" + blue + " City:" + white + " Balranald")
-		print(green + "[" + white + "4" + green + "]" + white + " 85.168.45.15 |" + blue + " Country:" + white + " France" + white + "    |" + blue + " City:" + white + " Paris")
-		print(green + "[" + white + "5" + green + "]" + white + " 11.54.156.85 |" + blue + " Country:" + white + " Usa" + white + "       |" + blue + " City:" + white + " Kansas")
+		print(numbering(1) + white + " 84.158.45.15 |" + blue + " Country:" + white + " Germany" + white + "   |" + blue + " City:" + white + " Eutin")
+		print(numbering(2) + white + " 126.121.51.5 |" + blue + " Country:" + white + " Japan" + white + "     |" + blue + " City:" + white + " Toride")
+		print(numbering(3) + white + " 43.158.42.67 |" + blue + " Country:" + white + " Australia" + white + " |" + blue + " City:" + white + " Balranald")
+		print(numbering(4) + white + " 85.168.45.15 |" + blue + " Country:" + white + " France" + white + "    |" + blue + " City:" + white + " Paris")
+		print(numbering(5) + white + " 11.54.156.85 |" + blue + " Country:" + white + " Usa" + white + "       |" + blue + " City:" + white + " Kansas")
 		
 		PreIp = int(input(green + "root@phishmailer/IpPick:~  "))
 		
@@ -109,6 +104,7 @@ def Discord():
 	Html_file.write(source)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()
@@ -278,6 +274,7 @@ def Paypal1():
 	Html_file.write(letter1)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(letter1)
 	TXT_file.close()
@@ -289,50 +286,21 @@ def Snapchat():
 	Date = input(start + " Enter Date: ")
 	print("")
 	print(start + " Enter Month When Login Happend")
-	print(green + "[" + white + "1" + green + "]" + white + " January")
-	print(green + "[" + white + "2" + green + "]" + white + " February")
-	print(green + "[" + white + "3" + green + "]" + white + " March")
-	print(green + "[" + white + "4" + green + "]" + white + " April")
-	print(green + "[" + white + "5" + green + "]" + white + " May")
-	print(green + "[" + white + "6" + green + "]" + white + " June")
-	print(green + "[" + white + "7" + green + "]" + white + " July")
-	print(green + "[" + white + "8" + green + "]" + white + " August")
-	print(green + "[" + white + "9" + green + "]" + white + " September")
-	print(green + "[" + white + "10" + green + "]" + white + " October")
-	print(green + "[" + white + "11" + green + "]" + white + " November")
-	print(green + "[" + white + "12" + green + "]" + white + " December")
+	print(numbering(1) + white + " January")
+	print(numbering(2) + white + " February")
+	print(numbering(3) + white + " March")
+	print(numbering(4) + white + " April")
+	print(numbering(5) + white + " May")
+	print(numbering(6) + white + " June")
+	print(numbering(7) + white + " July")
+	print(numbering(8) + white + " August")
+	print(numbering(9) + white + " September")
+	print(numbering(10) + white + " October")
+	print(numbering(11) + white + " November")
+	print(numbering(12) + white + " December")
 	print("")
 	monthpick = int(input(green + "root@phishmailer/month:~ " + white))
-	
-	if monthpick == 1:
-		month = ("January")
-	elif monthpick == 2:
-		month = ("February")
-	elif monthpick == 3:
-		month = ("March")
-	elif monthpick == 4:
-		month = ("April")
-	elif monthpick == 5:
-		month = ("May")
-	elif monthpick == 6:
-		month = ("June")
-	elif monthpick == 7:
-		month = ("July")
-	elif monthpick == 8:
-		month = ("August")
-	elif monthpick == 9:
-		month = ("September")
-	elif monthpick == 10:
-		month ("October")
-	elif monthpick == 11:
-		month = ("November")
-	elif month == 12:
-		month = ("December")
-	else:
-		print(alert + " Error")
-		time.sleep(1)
-		print(alert + " Exiting")
-		sys.exit()
+	month = monthName(monthpick)
 	
 	print("")
 	Time = input(start + " Enter Time (example 11:45:17): ")
@@ -403,6 +371,7 @@ def Snapchat():
 	Html_file.write(source)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()

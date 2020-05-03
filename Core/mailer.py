@@ -9,14 +9,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase  
 from email import encoders  
 from email.mime.text import MIMEText
-
-red = ("\033[1;31;40m")
-green = ("\033[1;32;40m")
-white = ("\033[1;37;40m")
-blue = ("\033[1;34;40m")
-
-start = (green + "[" + white + "+" + green + "]" + white)
-alert = (green + "[" + red + "!" + green + "]" + white)
+from Core.helper.color import green, white, blue, start, alert, numbering
 
 def NormalEmail():
 	os.system("clear")
@@ -24,8 +17,8 @@ def NormalEmail():
 	print("""
  __^__                                                        __^__
 ( ___ )------------------------------------------------------( ___ )
- | / |                                                        | \ |
- | / |+-------------)PhishMailer BaitMailer V1(--------------+| \ |
+ | / |                                                        | \\ |
+ | / |+-------------)PhishMailer BaitMailer V1(--------------+| \\ |
  |___|                                                        |___|
 (_____)------------------------------------------------------(_____) """)
 
@@ -56,7 +49,3 @@ def NormalEmail():
 		server.sendmail(fromaddr, toaddr, text)
 		server.quit()
 		print(alert + "Email Sent" + alert)
-
-
-
-

