@@ -61,7 +61,7 @@ chmod +x PhishMailer.py
 ```
 And then Run it:
 ```Run
-python3 PhishhMailer.py
+python3 PhishMailer.py
 ```
 ## To Do
 - [x] Send Emails
