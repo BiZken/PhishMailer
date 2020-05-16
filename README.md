@@ -69,7 +69,7 @@ python3 PhishMailer.py
 - [ ] Add More Target Specified Emails, With Profile Pictures for example
 - [ ] Add Emails With More Languages 
 - [ ] Mass Email Sender
-- [ ] Fix More Email Clients To Send From
+- [x] Fix More Email Clients To Send From
 - [ ] Make The Code Cleaner
 
 ## Contact
