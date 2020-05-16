@@ -30,6 +30,7 @@ from Core.ipmenu import Snapchat
 
 #EmailSender:
 from Core.mailer import NormalEmail
+from Core.helper.ToDo import TODO
 
 red = ("\033[1;31;40m")
 green = ("\033[1;32;40m")
@@ -71,7 +72,8 @@ print(green + "[" + white + "10" + green + "]" + white + " Linkedin" + green + "
 print(green + "-----------------------------------------------------------------------")
 print(green + "[" + white + "30" + green + "]" + white + " Send Phishing Email")
 print(green + "[" + white + "99" + green + "]" + red + " EXIT")
-print(green + "[" + white + "1337" + green + "]" + white + " Info\n")
+print(green + "[" + white + "1337" + green + "]" + white + " Info")
+print(green + "[" + white + "4444" + green + "]" + white + " ToDo List\n")
 
 print(green)
 mailPick = int(input("root@phishmailer:~ " + white))
@@ -155,6 +157,9 @@ elif mailPick == 1337:
 	print(green + "[" + white + "+" + green + "]" + white + " Email: bizken@protonmail.com")
 	print(green + "[" + white + "+" + green + "]" + white + " Github: BiZken [https://github.com/BiZken]")
 	
+elif mailPick == 4444:
+	TODO()
+
 else:
 	print("\nSomething Went Wrong There Partner")
 	print("Are You Ok? Did You Fell Out The Boat And Started Drowning?")
