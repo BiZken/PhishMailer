@@ -38,7 +38,7 @@ Don't Come To Me And Blame Me For It
   * Gamehag
 #### And More Are On The Way
 * Creates Both .HTML And .TXT Files
-* Send Emails Using Gmail
+* Send your emails to your target
 * Easy To Use
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/7jHvtgL/nyaste-meny.png" alt="nyaste-meny" border="0"></a>
