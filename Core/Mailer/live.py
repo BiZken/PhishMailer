@@ -42,7 +42,7 @@ def LiveEmail():
 	if debug:
 		print(msg.as_string())
 	else:
-		server = smtplib.SMTP('smtp.gmail.com',587)
+		server = smtplib.SMTP('smtp.live.com',587)
 		server.starttls()
 		server.login(fromaddr, password)
 		text = msg.as_string()
