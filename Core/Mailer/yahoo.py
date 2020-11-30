@@ -1,4 +1,5 @@
 import smtplib
+import ssl
 import os
 import getpass
 import sys
@@ -42,7 +43,7 @@ def YahooEmail():
 	if debug:
 		print(msg.as_string())
 	else:
-		server = smtplib.SMTP('smtp.mail.yahoo.com',587)
+		server = smtplib.SMTP_SSL('smtp.mail.yahoo.com',465)
 		server.starttls()
 		server.login(fromaddr, password)
 		text = msg.as_string()
