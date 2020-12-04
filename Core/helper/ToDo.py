@@ -6,10 +6,12 @@ def TODO():
 	print(start + " ToDo List " + start)
 	print(alert + " This List Will Be Updated" + alert)
 	print("")
-	print(numbering(1) + white + " Add More Email Template " + numbering(1))
+	print(numbering(1) + white + " Add More Email Template (will always update)" + numbering(1))
 	print(numbering(2) + white + " Create Better Interface (might take a while) " + numbering(2))
 	print(numbering(3) + white + " Add Mass Email Sender " + numbering(3))
 	print(numbering(4) + white + " Add Emails With Different Languages " + numbering(4))
 	print(numbering(5) + white + " Add More Target Specified Emails " + numbering(5))
+	print(numbering(6) + white + " Add Email Filter Bypass Redirect Templates " + numbering(6))
+	print(numbering(7) + white + " Add More Bypass Methods " + numbering(7))
 	
 

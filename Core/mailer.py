@@ -4,9 +4,13 @@ from Core.helper.color import green, white, blue, start, alert, numbering
 from Core.Mailer.gmail import Gmail
 from Core.Mailer.yahoo import YahooEmail
 from Core.Mailer.live import LiveEmail
+from Core.Mailer.MailHelp import *
+from Core.pre import pre
 
 def NormalEmail():
 	os.system("clear")
+	pre()
+	CheckPerm()
 	print(green)
 	print("""
  __^__                                                        __^__

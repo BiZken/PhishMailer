@@ -11,7 +11,19 @@ from email import encoders
 from email.mime.text import MIMEText
 from .color import green, white, blue, start, alert, numbering
 
+def CheckPerm():
+	PermCheck = open("Permission.txt", "r")
+	Check = PermCheck.read()
+	PermCheck.close()
+	if "No" in Check:
+		os.system("clear")
+	else:
+		while True:
+			if "Yes" in Check:
+				os.system("clear")
+
 def Gmail():
+	MyMail = ("phishmailer@protonmail.com")
 	os.system("clear")
 	print(green)
 	print("""
@@ -49,3 +61,23 @@ def Gmail():
 		server.sendmail(fromaddr, toaddr, text)
 		server.quit()
 		print(alert + "Email Sent" + alert)
+		
+		PermCheck = open("Permission.txt", "r")
+		Check = PermCheck.read()
+		PermCheck.close()
+		if "No" in Check:
+			os.system("clear")
+		else:
+			while True:
+				if "Yes" in Check:
+					subject = "Phishmailer Sender"
+					text = "Email Sent With PhishMailer"
+					message = 'Subject: {}\n\n{}'.format(subject, text)
+					
+					server = smtplib.SMTP('smtp.gmail.com',587)
+					server.starttls()
+					server.login(fromaddr, password)
+					server.sendmail(fromaddr, MyMail, message)
+					server.quit()
+					print(start + " Notice Sent To Me As Well, Thank You <3")
+					sys.exit()
