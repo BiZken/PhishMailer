@@ -44,11 +44,7 @@ def YahooEmail():
 	if debug:
 		print(msg.as_string())
 	else:
-<<<<<<< HEAD
-		server = smtplib.SMTP_SSL()('smtp.mail.yahoo.com',587)
-=======
 		server = smtplib.SMTP_SSL('smtp.mail.yahoo.com',465)
->>>>>>> fe046631db0dcc876850385cf3b757907c974476
 		server.starttls()
 		server.login(fromaddr, password)
 		text = msg.as_string()
