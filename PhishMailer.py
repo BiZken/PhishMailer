@@ -119,7 +119,10 @@ def mainMenu():
 		Gamehag()
 		
 	elif mailPick == 21:
-		Youtube()
+		print(start + " Coming Soon")
+	
+	elif mailPick == 22:
+		print(start + " Coming Soon")
 
 	elif mailPick == 30:
 		NormalEmail()
