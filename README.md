@@ -17,7 +17,7 @@ Because I Have used It To Hack Others But Remember That It Is Illegal To Do It S
 Don't Come To Me And Blame Me For It
 
 ### Features
-* Phishing Email Creator With 20 Different Templates: 
+* Phishing Email Creator With 22 Different Templates: 
   * Instagram
   * Facebook
   * Gmail(2)
@@ -36,10 +36,14 @@ Don't Come To Me And Blame Me For It
   * 000Webhosting
   * AskFM
   * Gamehag
+  * Github
+  * MEga.nz
 #### And More Are On The Way
+
 * Creates Both .HTML And .TXT Files
 * Send your emails to your target
 * Easy To Use
+* Redirection Option To Help Bypass Spam Filters (not FUD)
 
 <a href="https://ibb.co/THwcpWq"><img src="https://i.ibb.co/jL8hBJZ/mailer-Phish1-5.png" alt="mailer-Phish1-5" border="0"></a>
 
