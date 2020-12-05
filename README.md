@@ -45,7 +45,7 @@ Don't Come To Me And Blame Me For It
 * Easy To Use
 * Redirection Option To Help Bypass Spam Filters (not FUD)
 
-<a href="https://ibb.co/S7yxJRv"><img src="https://i.ibb.co/S7yxJRv/scrrenshot-fixed-1-5.png" alt="scrrenshot-fixed-1-5" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/rf0tv4y/scrrenshot-fixed-1-5.png" alt="scrrenshot-fixed-1-5" border="0"></a>
 
 #### Gmail (Simple) Result:
 <a href="https://ibb.co/kSjzn5s"><img src="https://i.ibb.co/hmbr5LJ/Gmail-github.png" alt="Gmail-github" border="0"></a>
