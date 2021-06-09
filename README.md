@@ -11,6 +11,8 @@ PhishMailer Will Help You To Create Professional Phishing Emails Fast And Easy
 
 #### If You Copy The Code And Make Your Own, Don't forget To Give Me Some Credit Kid!
 
+## You Don't Get Creds Using This Tool 
+
 ## Legal Disclaimer
 I Won't Say That You Can Only Use This Tool For Educational Purposes And That You Can't Use It To Hack Other People
 Because I Have used It To Hack Others But Remember That It Is Illegal To Do It So If You Get Caught You're On Your Own
