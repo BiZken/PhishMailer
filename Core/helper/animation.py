@@ -70,7 +70,7 @@ def AnimationMain():
 				start + " If You Read This That Means That I Have Not Published The Wiki Yet With The Tutorials On How To Use PhishMailer \n",
 				"    It Will Come Really Soon, I Just Need To Finish It First \n",
 				question + " What's Coming In The Next Update? \n",
-				start + " Right Now Im Working On SMTP So That The Phishing Attacks Looks More Legit, like spoofing")
+				start + " Right Now Im Working On SMTP So That The Phishing Attacks Looks More Legit, like spoofing",
 				start + " Add More Templates (DM for Ideas And I Can See What I Can Do) \n",
 				start + " Create Mass-Sender And Templates For That \n",
 				alert + " More Will Come For Each Update! \n",
