@@ -97,7 +97,7 @@ def mainMenu():
 		Playstation()
 		
 	elif mailPick == 12:
-		Paypal1
+		Paypal1()
 		
 	elif mailPick == 13:
 		Discord()
@@ -124,7 +124,7 @@ def mainMenu():
 		Dreamteam()
 		
 	elif mailPick == 21:
-		print(Gamehag)
+		print(Gamehag Coming Soon)
 	
 	elif mailPick == 22:
 		Mega()
