@@ -124,7 +124,7 @@ def mainMenu():
 		Dreamteam()
 		
 	elif mailPick == 21:
-		print(Gamehag Coming Soon)
+		print("Gamehag Coming Soon")
 	
 	elif mailPick == 22:
 		Mega()
