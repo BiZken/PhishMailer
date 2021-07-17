@@ -6,7 +6,7 @@ import requests
 from urllib.request import urlopen
 from Core.helper.color import green, white, blue, red, start, alert, numbering
 from Core.helper.animation import AnimationMain
-Version = "2.0"
+Version = "2.1"
 yellow = ("\033[1;33;40m")
 
 
