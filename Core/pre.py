@@ -27,7 +27,7 @@ def autoupdate():
 			data = json.load(json_file)
 		if data['check-for-updates'] == "yes":
 			print(alert + " Checking for updates...")
-			test = requests.get("https://github.com/BiZken/PhishMailer/blob/master/Version.dat")
+			test = requests.get("https://raw.githubusercontent.com/BiZken/PhishMailer/master/Version.dat")
 			time.sleep(2)
 			if Version in test.text:
 				print(start + " You Are Using PhishMailer v.{}, you are upto date!".format(Version))
