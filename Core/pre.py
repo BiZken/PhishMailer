@@ -6,7 +6,7 @@ import requests
 from urllib.request import urlopen
 from Core.helper.color import green, white, blue, red, start, alert, numbering
 from Core.helper.animation import AnimationMain
-Version = "2.1"
+Version = "2.2"
 yellow = ("\033[1;33;40m")
 
 
@@ -77,6 +77,7 @@ def menu():
 	print(green + "-----------------------------------------------------------------------")
 	print(green + "[" + white + "30" + green + "]" + white + " Send Phishing Email")
 	print(green + "[" + white + "69" + green + "]" + white + " Bypass Method ")
+	print(green + "[" + white + "80" + green + "]" + white + " Use Another Language " + red + "-New BETA")
 	print(green + "[" + white + "99" + green + "]" + red + " EXIT")
 	print(green + "[" + white + "1337" + green + "]" + white + " Info")
 	print(green + "[" + white + "4444" + green + "]" + white + " ToDo List\n")

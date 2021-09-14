@@ -38,6 +38,7 @@ from Core.ipmenu import Paypal1
 from Core.ipmenu import Snapchat
 from Core.pre import *
 from Core.helper.RedirectBypass import *
+from Core.anotherLang import *
 #EmailSender:
 from Core.Mailer.MailerMain import *
 from Core.helper.ToDo import TODO
@@ -134,6 +135,9 @@ def mainMenu():
 	
 	elif mailPick == 69:
 		RedirectionMain()
+
+	elif mailPick == 80:
+		Languages()
 
 	elif mailPick == 99:
 		os.system("clear")

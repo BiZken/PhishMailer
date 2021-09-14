@@ -26,7 +26,7 @@ def AnimationMain():
 
 		print(blue + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + white + "|" + blue + "~~~")
 		time.sleep(0.1)
-		print(white + " PhishMailer Version 2.0     .                     .              |")
+		print(white + " PhishMailer Version 2.2     .                     .              |")
 		time.sleep(0.1)
 		print(" Instagram: bizk3n           .                     .              |")
 		time.sleep(0.1)
@@ -57,17 +57,14 @@ def AnimationMain():
 		print("                                                   ^^^^^^^^^^^^^^^^ ")
 
 
-		lines = [green + " PhishMailer 2.0 New Major Update!",
+		lines = [green + " PhishMailer 2.2 New Major Update!",
 				white + " For Those Who Are New To PhishMailer I Just Want To Say Welcome! \n", 
 				alert + " Quick Info About The New Update:",
-				start + " Did A CleanUp In The Mailer Section \n",
-				start + " You Can Now Save Your Emails For Quicker And Easier Use \n",
-				start + " You Can Also Change The Senders Name So It Looks Like It Comes From Someone Else \n",
 				start + " For Every New Update That Comes You Will See This Print Out With Info But You Will Only See It Ones",
 				"    When You Run PhishMailer For The First Time \n",
-				start + " Changed The Code Alot In Some Areas \n",
 				start + " Working On Video Tutorials On How To Use PhishMailer \n",
-				start + " If You Read This That Means That I Have Not Published The Wiki Yet With The Tutorials On How To Use PhishMailer \n",
+				start + " But The Wiki Is Up On Github \n",
+				alert + " You Can Now Create Soem Emails With 3 New Languages \n",
 				"    It Will Come Really Soon, I Just Need To Finish It First \n",
 				question + " What's Coming In The Next Update? \n",
 				start + " Right Now Im Working On SMTP So That The Phishing Attacks Looks More Legit, like spoofing",
