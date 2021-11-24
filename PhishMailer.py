@@ -182,9 +182,9 @@ def mainMenu():
                     print("Are You Ok? Did You Fell Out The Boat And Started Drowning?")
                     sys.exit()
                     
-        except ValueError:
-            print("\nSomething Went Wrong There Partner")
-            print("Are You Ok? Did You Fell Out The Boat And Started Drowning?")
-            sys.exit()
+	except ValueError:
+		print("\nSomething Went Wrong There Partner")
+		print("Are You Ok? Did You Fell Out The Boat And Started Drowning?")
+		sys.exit()
 
 mainMenu()
